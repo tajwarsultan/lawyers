@@ -7,7 +7,6 @@
     export let title: string = '';
     export let subtitle: string = '';
     
-    // Pagination
     const itemsPerPage = 5;
     let currentPage = 1;
     

@@ -14,20 +14,18 @@
   
   <div class="border-b py-4 hover:bg-blue-50">
     <div class="flex">
-      <!-- Lawyer photo -->
-      <div class="w-24 h-24 mr-4 flex-shrink-0 cursor-pointer" on:click={viewProfile}>
+      <button type="button" class="w-24 h-24 mr-4 flex-shrink-0 cursor-pointer" onclick={viewProfile} aria-label="View Profile">
         <img 
           src={lawyer.photo} 
           alt={lawyer.lawyer} 
           class="w-full h-full object-cover rounded-full border"
         />
-      </div>
+      </button>
       
-      <!-- Lawyer info -->
       <div class="flex-grow">
-        <h3 class="text-navy-700 text-xl font-medium cursor-pointer" on:click={viewProfile}>
+        <button class="text-navy-700 text-xl font-medium cursor-pointer bg-transparent border-none p-0" onclick={viewProfile} aria-label="View Profile" onkeydown={(e) => e.key === 'Enter' && viewProfile()}>
           {lawyer.lawyer}
-        </h3>
+        </button>
         <p class="text-gray-700">{lawyer.firm}</p>
         
         {#if lawyer.street}
